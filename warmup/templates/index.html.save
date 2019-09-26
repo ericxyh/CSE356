@@ -1,0 +1,38 @@
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='theme.css') }}">
+</head>
+<body>
+{% if name %}
+Hi {{name}}! It is now {{date}}.
+<br>
+<table>
+	<tr>
+		<th></th>
+		<th></th>
+		<th></th>
+	</tr>
+	<tr>
+                <th></th>
+                <th></th>
+                <th></th>
+        </tr>
+	<tr>
+                <th></th>
+                <th></th>
+                <th></th>
+        </tr>
+</table>
+<br>
+Winner is 
+{% else %}
+Hi!
+<form action="" method="post">
+	Name: <input type="text" name="name">
+	<input type="submit" value="Submit">
+</form>
+
+{% endif %}
+</body>
+
+</html>

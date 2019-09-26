@@ -7,6 +7,6 @@ metadata:
 spec:
   containers:
     - name: hw3
-      image: ericxyh/hw3
+      image: ericxyh/cse356:hw3a
       ports: 
         - containerPort: 80

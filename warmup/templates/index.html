@@ -1,0 +1,43 @@
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='theme.css') }}">
+</head>
+<body>
+{% if name %}
+Hi {{name}}! {{date}}
+<table id='ttt'>
+	<tr>
+		<th> </th>
+		<th> </th>
+		<th> </th>
+	</tr>
+	<tr>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+        </tr>
+	<tr>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+        </tr>
+</table>
+<br>
+Winner is <span id='win'>none</span>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script type = "text/javascript" src = {{ url_for('static', filename='ttt.js') }} ></script>
+
+{% else %}
+Hi!
+<form action="" method="post">
+	Name: <input type="text" name="name">
+	<input type="submit" value="Submit">
+</form>
+
+{% endif %}
+</body>
+
+</html>
