@@ -1,0 +1,10 @@
+FROM ubuntu:16.04
+
+COPY ./hw0.html /var/www/html/
+
+RUN apt-get update && apt install apache2 tree -y && service apache2 start
+
+CMD ["ls", "/usr/sbin/apache2"]
+
+EXPOSE 80 
+
